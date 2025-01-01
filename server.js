@@ -36,6 +36,10 @@ app.use(morgan("dev"));
 // routes
 app.use("/api/auth", require("./routes/auth"));
 
+app.get("/api/hello", (req, res) => {
+  res.send("Hello World!");
+});
+
 // start server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
